@@ -56,3 +56,20 @@ a:hover {
   border-bottom-color: #8e8fd6;
   padding-bottom: 10px;
 }
+
+input {
+  font: inherit
+}
+textarea {
+  font: inherit
+}
+button {
+  font: inherit
+}
+
+form {
+  display: block;
+  min-width: 100%;
+  box-sizing: border-box;
+  margin-block: auto;
+}
