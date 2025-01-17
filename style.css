@@ -1,20 +1,48 @@
+:root {
+  --color-accent: #8e8fd6;
+}
+
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
        */
+    accent-color: var(--color-accent);
     margin-inline: auto;
     max-width: 100ch;
-    font: 100%/1.5 system-ui;
-    padding-top: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
+    /* padding: initial; */
+    font: 100% / 1.5 system-ui;
     padding-left: 50px;
-  }
-
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 ul {
   display: contents
 }
 
 li {
   display: contents
+}
+
+nav {
+  margin-bottom: 50px;
+  display: flex;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #8e8fd6;
+}
+
+a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.25cm;
+}
+
+.current {
+  border-bottom-width: 6px;
+  border-bottom-style: solid;
+  border-bottom-color: #8e8fd6;
+  padding-bottom: 10px;
 }
