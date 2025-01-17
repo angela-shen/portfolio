@@ -58,18 +58,11 @@ a:hover {
 }
 
 input {
-  display: block;
-  width: 100%;
   font: inherit;
-  box-sizing: border-box;
 }
 
 textarea {
-  display: block;
-  width: 100%;
   font: inherit;
-  box-sizing: border-box;
-  margin-block: 5px 10px;
 }
 
 button {
@@ -77,9 +70,12 @@ button {
 }
 
 form {
-  display: block;
-  min-width: 100%;
-  box-sizing: border-box;
-  margin-block: auto;
-  margin-block: 5px 10px;
+  display: grid;
+  gap: 1em;
+}
+
+label {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
 }
