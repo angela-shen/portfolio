@@ -1,5 +1,6 @@
-:root {
+html {
   --color-accent: #8e8fd6;
+  accent-color: var(--color-accent);
 }
 
 body {
@@ -38,6 +39,15 @@ a {
   color: inherit;
   text-align: center;
   padding: 0.25cm;
+}
+
+a:hover {
+  border-bottom-width: 6px;
+  border-bottom-style: solid;
+  border-bottom-color: #8e8fd6;
+  padding-bottom: 10px;
+  background-color: azure;
+  accent-color: var(--color-accent);
 }
 
 .current {
