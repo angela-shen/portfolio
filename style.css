@@ -58,11 +58,20 @@ a:hover {
 }
 
 input {
-  font: inherit
+  display: block;
+  width: 100%;
+  font: inherit;
+  box-sizing: border-box;
 }
+
 textarea {
-  font: inherit
+  display: block;
+  width: 100%;
+  font: inherit;
+  box-sizing: border-box;
+  margin-block: 5px 10px;
 }
+
 button {
   font: inherit
 }
@@ -72,4 +81,5 @@ form {
   min-width: 100%;
   box-sizing: border-box;
   margin-block: auto;
+  margin-block: 5px 10px;
 }
