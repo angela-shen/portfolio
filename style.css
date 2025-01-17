@@ -79,3 +79,14 @@ label {
   grid-column: 1 / -1;
   grid-template-columns: subgrid;
 }
+
+article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em
+}
+
+h2 {
+  margin: 0
+}
