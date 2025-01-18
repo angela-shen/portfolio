@@ -19,11 +19,46 @@ body {
 }
 
 ul {
-  display: contents
+  display: contents;
 }
 
 li {
-  display: contents
+  display: contents;
+}
+
+ul.bullets {
+  display: block;
+}
+
+li.points {
+  display: list-item;
+}
+
+section.heading {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template:
+  "a a" 25px
+  "b b" 30px;
+  gap: 1px;
+}
+
+p.location {
+  text-align: right;
+}
+
+p.date {
+  text-align: right;
+}
+
+h3 {
+  margin-bottom: 1px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+h4.name {
+  flex-grow: 10;
 }
 
 nav {
@@ -86,19 +121,12 @@ label {
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
 }
 
-article {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  gap: 5em;
-}
-
 h1 { 
   font-size: 400%; 
 }
 
 h2 {
-  margin: 0
+  margin: 0;
 }
 
 h1 { 
@@ -107,7 +135,7 @@ h1 {
       h4 {
         h5 {
           h6 {
-            line-height: 1.1;
+            line-height: 5px;
             text-wrap: balance;
           }
         }
