@@ -13,10 +13,11 @@ function $$(selector, context = document) {
 // currentLink?.classList.add('current');
 
 let pages = [
+    { url: 'https://github.com/angela-shen', title: 'GitHub' },
     { url: '', title: 'Home' },
     { url: 'contact/', title: 'Contact' },
     { url: 'projects/', title: 'Projects' },
-    { url: 'resume/', title: 'Resume' },
+    { url: 'resume/', title: 'Resume' }
     // add the rest of your pages here
   ];
 
