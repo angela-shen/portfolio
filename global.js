@@ -27,9 +27,6 @@ document.body.prepend(nav);
 for (let p of pages) {
     let url = p.url;
     let title = p.title;
-    const ARE_WE_HOME = document.documentElement.classList.contains('home');
-
-    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
     // Create link and add it to nav
     let a = document.createElement('a');
     a.href = url;
@@ -37,7 +34,9 @@ for (let p of pages) {
     nav.append(a);
   }
 
-  
+const ARE_WE_HOME = document.documentElement.classList.contains('home');
+
+url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
 
 
 if (a.host === location.host && a.pathname === location.pathname) {
