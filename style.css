@@ -96,16 +96,13 @@ a:hover {
 }
 
 input {
-  font: inherit;
+  textarea {
+    button {
+      font: inherit
+    }
+  }
 }
 
-textarea {
-  font: inherit;
-}
-
-button {
-  font: inherit
-}
 
 form {
   display: grid;
@@ -144,4 +141,15 @@ h1 {
       }
     }
   }    
+}
+
+label.color-scheme {
+  position: absolute;
+  top : 1rem;
+  right : 1rem;
+}
+
+select {
+  font-size: 80%;
+  font-family: inherit;
 }
