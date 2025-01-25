@@ -1,6 +1,7 @@
 html {
   --color-accent: #8e8fd6;
   accent-color: var(--color-accent);
+  color-scheme: dark;
 }
 
 body {
