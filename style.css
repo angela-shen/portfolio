@@ -63,7 +63,7 @@ h4.name {
 }
 
 nav {
-  --border-color: oklch(50% 0.1 280 / 60%);
+  --border-color: oklch(60% 0.1 280 / 60%);
   margin-bottom: 50px;
   display: flex;
   border-bottom-width: 3px;
@@ -84,7 +84,7 @@ a:hover {
   border-bottom-style: solid;
   border-bottom-color: var(--border-color);
   padding-bottom: 10px;
-  background-color: oklch(50% 0.1 280 / 50%);
+  background-color: oklch(75% 0.1 280 / 60%);
   accent-color: var(--color-accent);
 }
 
