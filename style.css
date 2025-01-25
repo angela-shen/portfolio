@@ -62,11 +62,13 @@ h4.name {
 }
 
 nav {
+  color-scheme: dark;
+  --border-color: oklch(50% 10% 200 / 40%);
   margin-bottom: 50px;
   display: flex;
   border-bottom-width: 3px;
   border-bottom-style: solid;
-  border-bottom-color: #8e8fd6;
+  border-bottom-color: var(--border-color);
 }
 
 a {
@@ -80,7 +82,7 @@ a {
 a:hover {
   border-bottom-width: 6px;
   border-bottom-style: solid;
-  border-bottom-color: #8e8fd6;
+  border-bottom-color: var(--border-color);
   padding-bottom: 10px;
   background-color: azure;
   accent-color: var(--color-accent);
@@ -89,7 +91,7 @@ a:hover {
 .current {
   border-bottom-width: 6px;
   border-bottom-style: solid;
-  border-bottom-color: #8e8fd6;
+  border-bottom-color: var(--border-color);
   padding-bottom: 10px;
 }
 
