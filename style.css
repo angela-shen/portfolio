@@ -62,7 +62,6 @@ h4.name {
 }
 
 nav {
-  color-scheme: dark;
   --border-color: oklch(50% 10% 200 / 40%);
   margin-bottom: 50px;
   display: flex;
