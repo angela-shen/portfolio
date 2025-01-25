@@ -38,7 +38,7 @@ for (let p of pages) {
       a.classList.add('current');
     }
     if (a.host != location.host) {
-      a.classList.add('_blank');
+      a.target = "_blank";
     }
     nav.append(a);
   }
