@@ -1,38 +1,45 @@
 [
 	{
-		"title": "Lorem ipsum dolor sit.",
+		"title": "Expository Weather Visualization",
+        "year": "2025",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+		"description": "Data visualization that uses expressive visual design choices to demonstrate a weather trend in San Diego compared to other US cities. Data collected from https://www.usclimatedata.com/."
 	},
 	{
-		"title": "Architecto minima sed omnis?",
+		"title": "Deceptive Data Visualization",
+        "year": "2025",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Est, reiciendis aspernatur debitis maxime et itaque animi sit quod quo, tempore incidunt tempora dignissimos exercitationem enim numquam quam quaerat optio laborum ut unde hic delectus laboriosam? Quasi, cupiditate corporis."
+		"description": "Data visualization that uses deceptive tactics to push a specific narrative, based on data from this physionet study about Tai Chi: https://physionet.org/content/taichidb/1.0.2/."
 	},
 	{
-		"title": "Asperiores rem repellendus doloremque.",
+		"title": "Expectation Maximization Algorithm",
+        "year": "2024",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Eligendi tenetur quae quos recusandae est. Cumque, voluptatem. Quo nihil dignissimos molestiae explicabo praesentium aspernatur debitis, illo rerum possimus quam ducimus earum nulla officiis maiores itaque repellat corporis soluta labore?"
+		"description": "Implementation of Expectation Maximization Algorithm for CSE150A on a dataset of student participants reporting which movies they liked out of a given set of popular films. Check out the repo here: https://github.com/angela-shen/Projects/tree/main/Expectation%20Maximization%20(EM)%20Algorithm"
 	},
 	{
-		"title": "Laudantium reprehenderit placeat perspiciatis.",
+		"title": "Math 189 California Housing Data Group Project",
+        "year": "2024",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Quo minus perferendis nulla corrupti repellat dolorem dolore assumenda sit minima ducimus quidem ullam, id ipsa dicta tempora laborum officiis unde possimus cumque nobis alias inventore! Ullam repudiandae iusto nam."
+		"description": "Math 189 group project that investigates US housing data and runs various data transformations and statistical tests. Check out the repo here: https://github.com/angela-shen/Math189-group33 "
 	},
 	{
-		"title": "Consequuntur autem eos facere.",
+		"title": "Analyzing Relationships Between Minutes and Ratings of Recipes - DSC80 Final Project",
+        "year": "2024",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Laborum alias ea unde harum aspernatur? Molestiae, veritatis, possimus, numquam ex excepturi quod ducimus sit odit optio quibusdam sequi aliquid itaque tempore perspiciatis placeat expedita vero voluptates. Sit, aspernatur sint!"
+		"description": "Final Project for DSC80, collaborated with Kendall Underwood to study trends and create a sophisticated prediction model. Check out the repo here: https://github.com/PandaFalls2004/Minutes_and_Ratings. Check out our website here: https://pandafalls2004.github.io/Minutes_and_Ratings/"
 	},
 	{
-		"title": "Quos sint quaerat omnis?",
+		"title": "Conway's Game of Life",
+        "year": "2023",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Est neque, velit nam rerum error odio voluptates voluptatem magnam laboriosam ad? Doloribus, id et itaque unde porro totam ullam quaerat blanditiis odit animi eveniet aut, voluptate velit iure odio."
+		"description": "Implementation of Conway's Game of Life for UCSC CSE13s, which can be played on the command line."
 	},
 	{
-		"title": "Iste ipsam magni fuga!",
+		"title": "Schmidt Samoa Cryptography",
+        "year": "2023",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Velit omnis suscipit nemo quia? Iste maiores numquam labore quia nemo eveniet odit, modi magnam? Architecto officia sint est. Architecto iste minima consequuntur explicabo illo error sed at dolore nostrum!"
+		"description": "Implementation of Schmidt Samoa cryptography. Produces public and private keys to encrypt and decrypt files. Uses gnu's gmp (gnu multi-precision library)."
 	},
 	{
 		"title": "Ipsum, aperiam magni? Nobis.",
@@ -50,13 +57,15 @@
 		"description": "Aut voluptatem sint atque corrupti accusamus necessitatibus possimus et, itaque nulla id deleniti nemo repellendus asperiores molestias laudantium, mollitia ad dicta. Laboriosam, itaque. Quos corporis, perferendis natus officiis beatae qui."
 	},
 	{
-		"title": "Nobis iste neque quaerat.",
+		"title": "DSC106 Project 3.",
+        "year": "2025",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Quos, recusandae, sit rerum velit nostrum nihil quisquam tempora repellat sed quibusdam facilis. Assumenda quaerat ab, nesciunt odio facere sit, ipsa necessitatibus tempora, maiores commodi sed quae provident deserunt at?"
+		"description": "TBD."
 	},
 	{
-		"title": "Iusto, incidunt. Totam, illum.",
+		"title": "DSC106 Final Project.",
+        "year": "2025",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Tempore, eveniet minus velit, earum aperiam necessitatibus repellendus provident accusamus illum officiis doloribus, eum saepe est aut numquam distinctio pariatur natus totam repellat. Numquam nulla libero sapiente magnam nostrum ex."
+		"description": "TBD."
 	}
 ]
