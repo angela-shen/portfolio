@@ -80,12 +80,12 @@ export async function fetchJSON(url) {
         throw new Error(`Failed to fetch projects: ${response.statusText}`);
     }
 
+    const data = await response.json();
+    return data; 
   } catch (error) {
       console.error('Error fetching or parsing JSON data:', error);
   }
 
-  const data = await response.json();
-  return data; 
 }
 
 export function renderProjects(project, containerElement, headingLevel = 'h2')  {
