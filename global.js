@@ -83,6 +83,22 @@ export async function fetchJSON(url) {
   } catch (error) {
       console.error('Error fetching or parsing JSON data:', error);
   }
+
+  const data = await response.json();
+  return data; 
 }
 
+export function renderProjects(project, containerElement, headingLevel = 'h2')  {
+  // Your code will go here
+  containerElement.innerHTML = '';
+  for (let p of project) {
+    const article = document.createElement('article'); 
+    article.innerHTML = `
+    <h3>${project.title}</h3>
+    <img src="${project.image}" alt="${project.title}">
+    <p>${project.description}</p>
+    `;
+    containerElement.appendChild(article);
 
+  }
+}
