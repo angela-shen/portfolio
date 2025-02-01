@@ -99,6 +99,5 @@ export function renderProjects(project, containerElement, headingLevel = 'h2')  
     <p>${project.description}</p>
     `;
     containerElement.appendChild(article);
-
   }
 }
