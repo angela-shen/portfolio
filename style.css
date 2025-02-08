@@ -164,3 +164,41 @@ dl {
   "c c" 20px
   "d d" 20px;
 }
+
+/* lab 5*/
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+span {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+}
+
+ul.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  border: solid;
+  padding: 5px;
+  gap: 15px;
+}
+
+li.legend-items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+div.container {
+  display: flex;
+  align-items: start;
+  flex: 1;
+  gap: 2em;
+}

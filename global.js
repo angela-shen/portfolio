@@ -88,6 +88,7 @@ export async function fetchJSON(url) {
 
 }
 
+
 export function renderProjects(project, containerElement, headingLevel = 'h2')  {
   // Your code will go here
   containerElement.innerHTML = '';
@@ -96,7 +97,8 @@ export function renderProjects(project, containerElement, headingLevel = 'h2')  
     article.innerHTML = `
     <h3>${project[i].title}</h3>
     <img src="${project[i].image}" alt="${project[i].title}">
-    <p>${project[i].description}</p>`;
+    <div><p>${project[i].description}</p></div>
+    <div><p>${project[i].year}</p><div>`;
     containerElement.appendChild(article);
   }
 }
