@@ -90,6 +90,7 @@ let selectedIndex = -1;
 // Refactor all plotting into one function
 function renderPieChart(projectsGiven) {
     // re-calculate rolled data
+    //console.log(projectsGiven)
     let newRolledData = d3.rollups(
       projectsGiven,
       (v) => v.length,
@@ -161,10 +162,8 @@ function renderPieChart(projectsGiven) {
                 newData.forEach((d, idx) => {
                     year = idx === selectedIndex ? d.label : year;
                 });
-                console.log(year);
                 let filteredProjects = projectsGiven.filter(p => p.year === year)
                 //console.log(filteredProjects)
-                console.log(filteredProjects)
                 /*let filteredProjects = projects.filter((project) => {
                     let values = Object.values(project).join('\n').toLowerCase();
                     return values.includes(query.toLowerCase());
