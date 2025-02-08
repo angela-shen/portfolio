@@ -23,10 +23,6 @@ ul {
   display: contents;
 }
 
-li {
-  display: contents;
-}
-
 ul.bullets {
   display: block;
 }
@@ -201,4 +197,36 @@ div.container {
   align-items: start;
   flex: 1;
   gap: 2em;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+
+li.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+  display: flex;
+}
+
+li {
+  display: flex;
 }
