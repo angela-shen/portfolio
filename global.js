@@ -1,8 +1,8 @@
 console.log('IT’S ALIVE!');
 
 function $$(selector, context = document) {
-  return Array.from(context.querySelectorAll(selector));
- }
+    return Array.from(context.querySelectorAll(selector));
+}
 
 // let navLinks = $$("nav a");
 
@@ -17,7 +17,8 @@ let pages = [
     { url: '', title: 'Home' },
     { url: 'contact/', title: 'Contact' },
     { url: 'projects/', title: 'Projects' },
-    { url: 'resume/', title: 'Resume' }
+    { url: 'resume/', title: 'Resume' },
+    { url: 'meta/', title: 'Meta' }
     // add the rest of your pages here
   ];
 
