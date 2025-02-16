@@ -230,3 +230,51 @@ li.selected {
 li {
   display: flex;
 }
+
+/*lab 5 */
+dl.info {
+  display: grid;
+  grid-template-columns: 30px 200px;
+  background-color : rgba(209, 180, 234, 0.8);
+  box-shadow : 10px 5px 5px black;
+  border-radius : 10px;
+  backdrop-filter: blur(20px);
+  padding : 3px ;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em; 
+  left: 1em;
+}
+
+dt {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+dd {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
