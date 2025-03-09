@@ -2,8 +2,8 @@ let data = [];
 let filteredCommits = [];
 let newCommitSlice = [];
 
-let NUM_ITEMS = 100; // Ideally, let this value be the length of your commit history
-let ITEM_HEIGHT = 30; // Feel free to change
+let NUM_ITEMS = 54; // Ideally, let this value be the length of your commit history
+let ITEM_HEIGHT = 100; // Feel free to change
 let VISIBLE_COUNT = 10; // Feel free to change as well
 let totalHeight = (NUM_ITEMS - 1) * ITEM_HEIGHT;
 const scrollContainer = d3.select('#scroll-container');
@@ -14,18 +14,49 @@ scrollContainer.on('scroll', () => {
   const scrollTop = scrollContainer.property('scrollTop');
   let startIndex = Math.floor(scrollTop / ITEM_HEIGHT);
   startIndex = Math.max(0, Math.min(startIndex, commits.length - VISIBLE_COUNT));
-  displayCommitFiles();
   renderItems(startIndex);
+  calculateFiles();
+  displayCommitFiles();
 });
 
+let maxfiles;
+let fileHeight; 
+let VISIBLE_COUNT_2 = 1;
+let ITEM_HEIGHT_2 = 30;
+let startIndex2;
+let files = [];
+const fileContainer = d3.select('#file-container');
+const filespacer = d3.select('#file-spacer');
+const fileitemsContainer = d3.select('#file-item-container');
 
 document.addEventListener('DOMContentLoaded', async () => {
   await loadData();
-  sliderEdits();
-  //displayCommitFiles();
+  //sliderEdits();
+  displayCommitFiles();
   updateScatterplot(commits);
   brushSelector();
+  displayCommitFiles();
 });
+
+function calculateFiles() {
+  
+  let lines = newCommitSlice.flatMap((d) => d.lines);
+  
+  files = d3
+    .groups(lines, (d) => d.file)
+    .map(([name, lines]) => {
+      return { name, lines };
+    });
+  maxfiles = files.length;
+  fileHeight = (maxfiles - 1) * ITEM_HEIGHT_2;
+  filespacer.style('height', `${fileHeight}px`);
+  fileContainer.on('scroll', () => {
+    const fileTop = fileContainer.property('scrollTop');
+    startIndex2 = Math.floor(fileTop / ITEM_HEIGHT_2);
+    startIndex2 = Math.max(0, Math.min(startIndex2, files.length - VISIBLE_COUNT_2));
+    renderFiles(startIndex2, files);
+  });
+}
 
 function filterCommitsByTime(commitMaxTime) {
   filteredCommits = commits.filter((d) => d.datetime < commitMaxTime);
@@ -457,7 +488,7 @@ function renderItems(startIndex) {
   itemsContainer.selectAll('div').remove();
   const endIndex = Math.min(startIndex + VISIBLE_COUNT, commits.length);
   newCommitSlice = commits.slice(startIndex, endIndex);
-  // TODO: how should we update the scatterplot (hint: it's just one function call)
+  // Update the scatterplot with the new slice
   updateScatterplot(newCommitSlice);
   brushSelector();
   // Re-bind the commit data to the container and represent each using a div
@@ -471,14 +502,35 @@ function renderItems(startIndex) {
                     <p>
                       On ${commit.datetime.toLocaleString("en", { dateStyle: "full", timeStyle: "short" })}, I made
                       <a href="${commit.url}" target="_blank">
-                        ${index > 0 ? 'another glorious commit' : 'my first commit, and it was glorious'}
-                      </a>. I edited ${commit.totalLines} lines across ${fileCount} files. Then I looked over all I had made, and
-                      I saw that it was very good.
+                        ${index > 0 ? 'another commit, continuing my labs' : 'my first commit of the quarter.'}
+                      </a>. I edited ${commit.totalLines} lines across ${fileCount} files. ${commit.totalLines > 10 ? 'Light work.' : 'A grueling task.'}
                     </p>
                   `;
-                }) // TODO: what should we include here? (read the next step)
-                .style('position', 'relative')
-                .style('top', (_, idx) => `${idx * ITEM_HEIGHT}px`)
+                })
+                .style('position', 'absolute')
+                .style('top', (_, idx) => `${(startIndex + idx) * ITEM_HEIGHT}px`);
+}
+
+function renderFiles(startIndex2, files){
+  // Clear things off
+  fileitemsContainer.selectAll('div').remove();
+  const endIndex = Math.min(startIndex2 + VISIBLE_COUNT_2, files.length);
+  let newfileSlice = files.slice(startIndex2, endIndex);
+  // Re-bind the file data to the container and represent each using a div
+  fileitemsContainer.selectAll('div')
+                .data(newfileSlice)
+                .enter()
+                .append('div')
+                .html((file) => {
+                  return `
+                    <p>
+                      File: ${file.name} - ${file.lines.length} lines
+                      That's a lot of lines!
+                    </p>
+                  `;
+                })
+                .style('position', 'absolute')
+                .style('top', (_, idx) => `${(startIndex2 + idx) * ITEM_HEIGHT_2}px`);
 }
 
 function displayCommitFiles() {
@@ -488,9 +540,11 @@ function displayCommitFiles() {
     return { name, lines };
   });
   files = d3.sort(files, (d) => -d.lines.length);
+
+  //console.log(files)
   d3.select('.files').selectAll('div').remove();
   let filesContainer = d3.select('.files').selectAll('div').data(files).enter().append('div');
-  filesContainer.append('dt').attr('id', 'files').html(d => `<code>${d.name}</code><small>${d.lines.length} lines</small>`);
+  filesContainer.append('dt').attr('id', 'files').html(d => `<code>${d.name}</code><small>${': ' + d.lines.length} lines</small>`);
   filesContainer.append('dd').attr('id', 'files')
                 .selectAll('div')
                 .data(d => d.lines)

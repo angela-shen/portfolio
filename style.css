@@ -329,7 +329,7 @@ time {
   border-radius: 50%;
 }
 
-:global(body) {
+body {
   max-width: min(120ch, 80vw);
 }
 
@@ -371,7 +371,42 @@ time {
 }
 
 .item {
-  height: 30px;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #eee;
+}
+
+/* UGHHHH */
+#file-container {
+  grid-column: 1;
+  position: relative;
+  width: 95%;
+  height: 40px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+
+#file-spacer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: none; /* transparent */
+  pointer-events: none;
+}
+
+#file-item-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.item {
+  height: 100px;
   padding: 10px;
   box-sizing: border-box;
   border-bottom: 2px solid #eee;

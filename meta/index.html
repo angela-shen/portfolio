@@ -13,12 +13,6 @@
 <p>This page includes stats about this website</p>
 <div id="stats"></div>
 <h2>Commits by time of day</h2>
-<div id="slider">
-<label>
-<input type="range" min="0" max="100" value="100" class="slider" id="#slider">
-<time id = '#selected-time'></time>
-</label>
-</div>
 
 <dl class="files">
     <!-- we want the following structure for each file-->
@@ -40,6 +34,12 @@
     <!-- our old scatterplot div -->
     <div id="chart"></div>
 </div>
+
+<div id="file-container">
+    <div id="file-spacer"></div>
+    <div id="file-item-container"></div>
+</div>
+
 <dl hidden id="commit-tooltip" class="info tooltip">
     <dt>Commit</dt>
     <dd>
