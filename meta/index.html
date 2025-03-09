@@ -13,7 +13,33 @@
 <p>This page includes stats about this website</p>
 <div id="stats"></div>
 <h2>Commits by time of day</h2>
-<div id="chart"></div>
+<div id="slider">
+<label>
+<input type="range" min="0" max="100" value="100" class="slider" id="#slider">
+<time id = '#selected-time'></time>
+</label>
+</div>
+
+<dl class="files">
+    <!-- we want the following structure for each file-->
+    <div>
+      <dt class="files">
+        <code></code>
+      </dt>
+      <dd>
+      </dd>      
+    </div>
+  </dl>
+  
+
+<div id="scrollytelling">
+    <div id="scroll-container">
+        <div id="spacer"></div>
+        <div id="items-container"></div>
+    </div>
+    <!-- our old scatterplot div -->
+    <div id="chart"></div>
+</div>
 <dl hidden id="commit-tooltip" class="info tooltip">
     <dt>Commit</dt>
     <dd>
